@@ -1,13 +1,17 @@
 import os
 import sys
+import getpass
+import time 
 
 def usage():
+    os.system("cls")  
     print("""
-        sys [shutdown sh|re [seconds] ][bios]
-        re      : restart
-        clean   : clean all temp files
-        hide    : hide file or folder. hide [path | h_ps]
-        uhide   : unhide the file and folder. uhide [path | uh_ps]
+        sys [shutdown sh|re [seconds] ][bios][..]
+        re       : restart
+        clean    : clean all temp files
+        hide     : hide file or folder. hide [path | h_ps]
+        uhide    : unhide the file and folder. uhide [path | uh_ps]
+        password : to change the sys password 
     """)
     sys.exit(0)
 
@@ -74,6 +78,22 @@ def clean():
     except Exception as e:
         print(f"Error during cleaning: {e}")
 
+def change_password():
+    print(os.system("net user")) 
+    try:
+        user = input("enter user to modefy password :")
+        # temp_password = getpass.getpass("Enter new password: ")
+        # password = getpass.getpass("Confirm password: ")
+        if user:  
+            os.system(f"net user {user} * ")
+            print("password change successfully")  
+        else:
+            print("user not found ")  
+    except Exception as e:
+        raise e
+
+
+
 def main():
     if not len(sys.argv[1:]):
         usage()
@@ -116,8 +136,11 @@ def main():
     elif command == "clean":
         clean()
 
+    elif command == "password":
+        change_password()
+
     else:
-        print("Unexpected argument. Use 'sys' to see the usage information.")
+        print("Unexpected argument")
 
 if __name__ == "__main__":
     main()
