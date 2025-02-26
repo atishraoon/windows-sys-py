@@ -13,7 +13,7 @@ A command-line utility to manage system operations like shutdown, restart, hidin
 Run the script with the desired command:
 
 ```bash
-python script.py [command] [optional arguments]
+script.py [command] [optional arguments]
 script.exe [command] [optional arguments]
 ```
 
@@ -59,5 +59,5 @@ This script performs system-level operations. Use it responsibly and ensure you 
 - Add GUI support for ease of use
 - Implement logging for system operations
 
-📌 **Enjoy using this tool!** 🚀
+📌 **Enjoy using this tool!** 🚀  
 
