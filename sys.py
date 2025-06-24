@@ -75,6 +75,7 @@ def clean():
         os.system(f"del /q /f /s {prefetch}\\*")
         os.system(f"del /q /f /s {local_temp}\\*") 
         print('Cleaned successfully')
+        os.system('cls')  
     except Exception as e:
         print(f"Error during cleaning: {e}")
 
