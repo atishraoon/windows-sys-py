@@ -62,3 +62,7 @@ This script performs system-level operations. Use it responsibly and ensure you 
 
 📌 **Enjoy using this tool!** 🚀  
 
+## upcomming update
+- add debloot script
+- window activation 10,11
+
