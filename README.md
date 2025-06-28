@@ -56,8 +56,6 @@ script.exe [command] [optional arguments]
 This script performs system-level operations. Use it responsibly and ensure you have administrative privileges where necessary.
 
 ## 🎯 Future Enhancements
-- Add GUI support for ease of use
-- Implement logging for system operations
 - make window faster by disabling some features 
 
 📌 **Enjoy using this tool!** 🚀  
